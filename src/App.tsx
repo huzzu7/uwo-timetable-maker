@@ -67,11 +67,21 @@ export default function App() {
         <section className="panel courses-panel">
           <div className="panel-head">
             <h2>Courses</h2>
-            {selectedCodes.length > 0 && (
-              <button className="link-btn" onClick={clearAll}>
-                Reset
-              </button>
-            )}
+            <div className="panel-head-actions">
+              <a
+                className="link-btn"
+                href="https://github.com/JanikThePanic/uwo-timetable-maker/blob/main/docs/INSTALLING_COURSES.md"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Install Course
+              </a>
+              {selectedCodes.length > 0 && (
+                <button className="link-btn" onClick={clearAll}>
+                  Reset
+                </button>
+              )}
+            </div>
           </div>
 
           <CoursePicker courses={allCourses} />
